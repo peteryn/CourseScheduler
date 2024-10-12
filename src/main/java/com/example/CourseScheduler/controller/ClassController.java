@@ -23,12 +23,8 @@ public class ClassController {
         UserDetails user = User.builder()
                 .username("user1")
                 .password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
-//                .password("password")
                 .roles("USER")
                 .build();
-//        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-//        users.createUser(user);
-//        return users;
         userDetailsManager.createUser(user);
         return "made";
     }

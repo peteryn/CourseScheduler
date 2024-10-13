@@ -50,22 +50,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        UserDetails userDetails = User.withDefaultPasswordEncoder()
-//                .username("user")
-//                .password("password")
-//                .roles("USER")
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(userDetails);
-//    }
-
-//    @Bean
-//    DataSource dataSource() {
-//        return this.dataSourceConfig.getDataSource();
-//    }
-
     @Bean
     public UserDetailsManager users(DataSource dataSource) {
 //        UserDetails user = User.builder()

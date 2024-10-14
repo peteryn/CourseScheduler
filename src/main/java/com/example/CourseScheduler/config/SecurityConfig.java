@@ -52,15 +52,6 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsManager users(DataSource dataSource) {
-//        UserDetails user = User.builder()
-//                .username("user")
-//                .password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
-////                .password("password")
-//                .roles("USER")
-//                .build();
-//        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-//        users.createUser(user);
-//        return users;
         return new JdbcUserDetailsManager(dataSource);
     }
     // CREATE TABLE USERS (USERNAME VARCHAR(128) PRIMARY KEY, PASSWORD VARCHAR(128) NOT NULL, ENABLED BOOLEAN NOT NULL);
